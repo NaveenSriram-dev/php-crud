@@ -8,6 +8,6 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-header('location:index2.php');
+header('location:index.php');
 $conn->close();
 ?>

@@ -42,9 +42,21 @@
                       echo ' <td>'.$row["email"].'</td>';
 // The edit icon code
                       echo ' <td><form action="update.php" method="post" >
-                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"><input type="hidden" name="id" value="'.$row["id"].'"></span></button>
-                      </form> </td>';
-                      echo ' <td> <span class="glyphicon glyphicon-trash"></span> </td>';
+                                    <button type="submit" class="btn btn-primary">
+                                        <span class="glyphicon glyphicon-pencil">
+                                            <input type="hidden" name="id" value="'.$row["id"].'">
+                                        </span>
+                                    </button>
+                                 </form>
+                             </td>';
+                      echo ' <td> <form action="delete.php" method="post" >
+                                    <button type="submit" class="btn btn-primary">
+                                        <span class="glyphicon glyphicon-trash">
+                                            <input type="hidden" name="id" value="'.$row["id"].'">
+                                        </span>
+                                    </button>
+                                  </form>
+                             </td>';
                       echo '</tr>';
                       }
                   }
